@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        body {
+            background-color: #f0f0f0;
+            margin: 0; /* Remover margens padrão do body */
+            display: flex;
+            justify-content: center; /* Centralizar horizontalmente na página */
+            align-items: center; /* Centralizar verticalmente na página */
+            min-height: 100vh; /* Preencher a altura da janela de visualização */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1000px; /* Define a largura máxima do container */
+            padding: 70px; /* Adicione um preenchimento para espaçamento interno */
+            background-color: #fff; /* Cor de fundo para o container */
+            border-radius: 5px; /* Adicione bordas arredondadas ao container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adicione uma sombra suave */
+        }
+
+        .curriculo-header {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        img{
+            width: 200px;
+            height: 250px;
+            margin-right: 40px;
+            margin-left: 10px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h3 {
+            color: #4169E1;
+            display: flex;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="curriculo-header">
+            <img src="https://firebasestorage.googleapis.com/v0/b/originaly-dfcf1.appspot.com/o/IMG_2001.jpg?alt=media&token=7de0ee69-1d6c-4f72-81a4-217e51f8bdcf">
+            <div>
+                <h1 th:text="${nome}">nome</h1>
+                <p th:text="${skil}">skil</p>
+
+                <p th:text="${telefone}">telefone</p>
+                <p th:text="${email}">email</p>
+                <p th:text="${idade}">idade</p>
+                <p th:text="${civil}">civil</p>
+            </div>
+        </div>
+        <div class="curriculo-corpo">
+            <h3>Objetivo</h3>
+            <p th:text="${objetivo}">objetivo</p>
+
+            <h3>Cursos e Treinamentos</h3>
+            <p th:text="${cursos}">cursos</p>
+
+            <h3>Idioma</h3>
+            <p th:text="${idioma}">idioma</p>
+
+            <h3>Github</h3>
+            <p th:text="${github}">github</p>
+        </div>
+    </div>
+</body>
+</html>
